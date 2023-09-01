@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:ecommerce_app/screens/authentication/signup_screen.dart';
@@ -276,7 +277,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SocialCards(
-                          press: () {},
+                          press: ()  async {
+                            // Call the signInWithGoogleAndCreateUserDoc method when the Google icon is tapped
+                            UserCredential? userCredential = await Authentication().signInWithGoogleAndCreateUserDoc();
+                            if (userCredential != null) {
+                              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                                builder: (context) => const BottomNavBar(),
+                              ));
+                            }
+                          },
                           socialIcons:
                           'https://pngimg.com/uploads/google/google_PNG19635.png',
                         ),
