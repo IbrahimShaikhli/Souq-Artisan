@@ -257,13 +257,13 @@ class _LoginScreenState extends State<LoginScreen> {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.deepOrange,
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 40, vertical: 15),
+                                  horizontal: 60, vertical: 15),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
                               ),
                             ),
                             child: const Text(
-                              'Continue',
+                              'Login',
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -273,6 +273,24 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 40),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey,
+                            thickness: 0.5,
+                          ),
+                        ),
+                        Text('Or continue with'),
+                        Expanded(
+                          child: Divider(
+                            color: Colors.grey,
+                            thickness: 0.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -302,6 +320,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     ),
                     const SizedBox(height: 20),
+                    
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

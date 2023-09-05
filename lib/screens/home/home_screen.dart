@@ -181,9 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 class ProductsBanner extends StatelessWidget {
   final List<String> sliderImages = [
-    'asset/images/slider1.png',
     'asset/images/slider2.png',
-    'asset/images/slider3.png',
     'asset/images/slider4.png',
   ];
 
@@ -279,7 +277,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => const Size.fromHeight(120);
+  Size get preferredSize => const Size.fromHeight(110);
 
   @override
   Widget build(BuildContext context) {
